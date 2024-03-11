@@ -1,0 +1,16 @@
+.classNameInput {
+    padding: 12px 16px;
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--essential-subdued, #878787);
+    background: transparent;
+    border-radius: 0.2rem;
+    caret-color: #fff;
+    color: white;
+}
+
+.classNameError {
+    margin: 4px 0;
+    color: #dc2626;
+    font-size: 14px;
+}

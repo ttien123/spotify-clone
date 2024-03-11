@@ -1,9 +1,9 @@
+import useRouterElements from './useRouterElements';
+
 function App() {
-    return (
-        <div>
-            <h3>Hello world</h3>
-        </div>
-    );
+    const routeElements = useRouterElements();
+
+    return <main>{routeElements}</main>;
 }
 
 export default App;

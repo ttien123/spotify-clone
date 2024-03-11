@@ -1,0 +1,102 @@
+@import '../../components/GlobalStyles/media-query';
+
+.wrapper {
+    background: linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgb(0, 0, 0) 100%);
+
+    .container {
+        padding: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .content {
+            width: 100%;
+            max-width: 734px;
+            margin: 0 auto;
+            padding: 32px 0;
+            background: var(--background-base);
+
+            .title {
+                font-size: 48px;
+                margin: 48px 0;
+                color: var(--text-base);
+                text-align: center;
+            }
+
+            .form-box {
+                width: 324px;
+                margin: auto;
+
+                .labelClassName {
+                    font-size: 14px;
+                    margin-bottom: 8px;
+                    display: inline-block;
+                    color: white;
+                }
+
+                @include tablet_max {
+                    width: 100%;
+                }
+            }
+        }
+
+        .switch-login {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            span {
+                margin-left: 12px;
+                font-weight: 500;
+            }
+
+            .checkBoxClassName {
+                background-color: var(--essential-subdued);
+                width: 30px;
+                &:hover {
+                    background-color: var(--essential-subdued) !important;
+                }
+                &[aria-checked='true'] {
+                    background-color: #1ed760 !important;
+                    transition: none;
+                }
+            }
+        }
+
+        .linkToSignUp {
+            text-align: center;
+            font-size: 16px;
+            span {
+                color: var(--text-subdued);
+                font-weight: 500;
+                margin-right: 8px;
+            }
+        }
+
+        @include tablet_max {
+            padding: 0;
+
+            .content {
+                max-width: 100%;
+                padding: 32px;
+
+                .title {
+                    font-size: 32px;
+                    margin: 0 0 32px 0;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+.footer-login {
+    text-align: center;
+    color: var(--text-subdued);
+    font-size: 11px;
+    padding: 32px;
+    a {
+        color: var(--text-subdued);
+        text-decoration: underline;
+    }
+}

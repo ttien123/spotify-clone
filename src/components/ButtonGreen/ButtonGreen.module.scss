@@ -1,0 +1,22 @@
+.buttonSubmit {
+    background-color: #1ed760;
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 32px;
+    font-size: 16px;
+    height: 48px;
+    border-radius: 500px;
+
+    &:hover {
+        background-color: #1ed760 !important;
+        transform: scale(1.05);
+    }
+    span {
+        color: black;
+        font-weight: 500;
+    }
+}

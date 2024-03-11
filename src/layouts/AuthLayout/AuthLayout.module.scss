@@ -1,0 +1,31 @@
+@import '../../components//GlobalStyles//media-query';
+
+.wrapper {
+    overflow: auto;
+}
+
+.header {
+    padding: 32px 0px 32px 51px;
+    height: auto;
+    line-height: normal;
+
+    @include tablet_max {
+        padding: 48px 32px 0px;
+    }
+}
+
+.logo {
+    width: 117px;
+    height: 36px;
+
+    @include tablet_max {
+        width: 78px;
+        height: 24px;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

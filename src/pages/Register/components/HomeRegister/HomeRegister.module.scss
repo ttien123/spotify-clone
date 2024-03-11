@@ -1,0 +1,40 @@
+.container {
+    width: 100%;
+    max-width: 324px;
+}
+
+.box-line {
+    height: 1px;
+    position: relative;
+    background-color: white;
+    margin: 32px 0;
+
+    .text-line {
+        position: absolute;
+        padding: 0 12px;
+        font-weight: 500;
+        background: var(--background-base);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.line-long {
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    margin: 32px 0;
+    border-image: initial;
+    border-top: 1px solid rgb(41, 41, 41);
+}
+
+.linkToSignUp {
+    text-align: center;
+    font-size: 16px;
+    span {
+        color: var(--text-subdued);
+        font-weight: 500;
+        margin-right: 8px;
+    }
+}

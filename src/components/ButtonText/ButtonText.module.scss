@@ -1,0 +1,15 @@
+.textWhite {
+    text-decoration: underline;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    &:hover {
+        color: #1ed760;
+        text-decoration: underline;
+    }
+}
+
+.textGreen {
+    color: #1ed760;
+    text-decoration: underline;
+}

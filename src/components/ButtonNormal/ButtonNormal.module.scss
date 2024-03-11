@@ -1,0 +1,41 @@
+@import '../GlobalStyles/media-query';
+
+.wrapper {
+    padding: 7px 31px;
+    margin: 0 auto 8px;
+    font-weight: 700;
+    color: var(--text-base);
+    font-size: 1.6rem;
+    background: transparent;
+    border: 1px solid var(--essential-subdued);
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-block-size: 48px;
+    transition: all 0.25s linear;
+
+    &:hover {
+        border: 1px solid var(--essential-base);
+    }
+
+    .content {
+        display: block;
+        flex: 1;
+        height: 100%;
+        margin: 0 36px;
+    }
+
+    @include tablet_max {
+        width: 100%;
+
+        .logo {
+            margin-right: 0;
+        }
+
+        .content {
+            display: block;
+            flex: 1;
+        }
+    }
+}

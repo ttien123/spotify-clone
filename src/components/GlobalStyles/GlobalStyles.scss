@@ -1,20 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
+    --background-base: #121212;
+    --background-highlight: #1a1a1a;
+    --background-press: #000000;
+    --background-elevated-base: #242424;
+    --background-elevated-highlight: #2a2a2a;
+    --background-elevated-press: #000000;
+    --background-tinted-base: rgba(255, 255, 255, 0.07);
+    --background-tinted-highlight: rgba(255, 255, 255, 0.1);
+    --background-tinted-press: rgba(255, 255, 255, 0.04);
+    --background-unsafe-for-small-text-base: #121212;
+    --background-unsafe-for-small-text-highlight: #121212;
+    --background-unsafe-for-small-text-press: #121212;
+    --text-base: #ffffff;
+    --text-subdued: #a7a7a7;
+    --text-bright-accent: #1ed760;
+    --text-negative: #f15e6c;
+    --text-warning: #ffa42b;
+    --text-positive: #1ed760;
+    --text-announcement: #3d91f4;
+    --essential-base: #ffffff;
+    --essential-subdued: #727272;
+    --essential-bright-accent: #1ed760;
+    --essential-negative: #e91429;
+    --essential-warning: #ffa42b;
+    --essential-positive: #1ed760;
+    --essential-announcement: #0d72ea;
+    --decorative-base: #ffffff;
+    --decorative-subdued: #292929;
 }
 
 html {
     font-size: 62.5%;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
     line-height: 1.5;
+    font-weight: 500;
     text-rendering: optimizeSpeed;
+    margin: 0px;
+    background-color: var(--background-base, #ffffff);
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.line {
+    margin: 32px 100px;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    border-image: initial;
+    border-top: 1px solid rgb(41, 41, 41);
+}
+
+a:hover {
+    color: initial;
+}
+
+.flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
