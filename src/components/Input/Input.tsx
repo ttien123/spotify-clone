@@ -59,7 +59,7 @@ const Input = ({
                     <div className={cx('errorIcon')}>
                         <ErrorIcon />
                     </div>
-                    <span>Please enter your Spotify username or email address.</span>
+                    <span>{errorsMessage}</span>
                 </div>
             )}
         </div>

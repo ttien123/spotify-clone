@@ -14,7 +14,12 @@ import { useNavigate } from 'react-router-dom';
 import path from 'src/constants/path';
 const cx = classNames.bind(styles);
 
-const Terms = () => {
+interface Props {
+    setStep: React.Dispatch<React.SetStateAction<number>>;
+    step: number;
+}
+
+export const Terms = () => {
     return (
         <div className={cx('term')}>
             <div className={cx('term-container')}>
@@ -58,7 +63,7 @@ const Terms = () => {
     );
 };
 
-const InfoUser = () => {
+export const InfoUser = () => {
     const handleChangeGender = (e: React.ChangeEvent<HTMLInputElement>) => {
         console.log(e.target.value);
     };
@@ -130,10 +135,7 @@ const InfoUser = () => {
     );
 };
 
-const RegisterStep = () => {
-    const [step, setStep] = useState(1);
-    const negative = useNavigate();
-
+const RegisterStep = ({ setStep, step }: Props) => {
     const handleClick = () => {
         if (step < 3) {
             setStep((prev) => prev + 1);
@@ -145,11 +147,7 @@ const RegisterStep = () => {
     };
 
     const handleClickBack = () => {
-        if (step === 1) {
-            negative(path.register);
-        } else {
-            setStep((prev) => prev - 1);
-        }
+        setStep((prev) => prev - 1);
     };
 
     return (
