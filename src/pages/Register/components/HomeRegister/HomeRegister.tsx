@@ -36,7 +36,6 @@ const HomeRegister = ({ setStep }: Props) => {
     });
 
     const onSubmit = handleSubmit((data) => {
-        console.log(data);
         setRegisterValue(data);
         setStep((prev) => prev + 1);
     });
@@ -53,6 +52,7 @@ const HomeRegister = ({ setStep }: Props) => {
                     <Input
                         className=""
                         labelName="Email address"
+                        isShowError
                         placeholder="name@domain.com"
                         register={register}
                         name="email"

@@ -1,10 +1,13 @@
-import { FormData } from 'src/pages/Register/components/HomeRegister/HomeRegister';
 import { AuthSchema } from 'src/utils/rules';
 import { create } from 'zustand';
 
+interface registerValueInterface extends AuthSchema {
+    date_of_birth: Date | '';
+}
+
 interface registerInterface {
-    registerValue: AuthSchema;
-    setRegisterValue: (body: FormData) => void;
+    registerValue: registerValueInterface;
+    setRegisterValue: (body: Partial<AuthSchema> | { date_of_birth: Date }) => void;
 }
 
 const useGetRegister = create<registerInterface>()((set) => ({
@@ -12,7 +15,7 @@ const useGetRegister = create<registerInterface>()((set) => ({
         email: '',
         gender: '',
         password: '',
-        date_of_birth: new Date(1990, 1, 1),
+        date_of_birth: '',
         name: '',
     },
     setRegisterValue: (body) =>

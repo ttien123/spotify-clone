@@ -8,7 +8,6 @@ import useGetRegister from 'src/zustand/register.ztd';
 const Register = () => {
     const [step, setStep] = useState(0);
     const { registerValue, setRegisterValue } = useGetRegister();
-
     console.log(registerValue);
 
     return (

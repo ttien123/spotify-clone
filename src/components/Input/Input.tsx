@@ -17,6 +17,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
     register?: UseFormRegister<any>;
     rules?: RegisterOptions;
     description?: string;
+    isShowError?: boolean;
 }
 
 const Input = ({
@@ -34,6 +35,7 @@ const Input = ({
     classNameWrapInput = '',
     classNameDes = 'classNameDes',
     description = '',
+    isShowError,
     ...rest
 }: Props) => {
     const registerResult = register && name ? register(name, rules) : null;
@@ -54,7 +56,7 @@ const Input = ({
                     {...rest}
                 />
             </div>
-            {errorsMessage && (
+            {errorsMessage && isShowError && (
                 <div className={cx(`${classNameError}`)}>
                     <div className={cx('errorIcon')}>
                         <ErrorIcon />
