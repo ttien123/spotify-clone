@@ -1,0 +1,122 @@
+.boxDate {
+    &-des {
+        color: var(--text-subdued, #6a6a6a);
+        font-size: 14px;
+    }
+
+    &-container {
+        padding-top: 8px;
+        display: flex;
+        gap: 8px;
+        &-day {
+            inline-size: 30%;
+        }
+
+        &-month {
+            inline-size: 100%;
+            padding: 8px 14px;
+            background: transparent;
+            color: white;
+            font-weight: 500;
+            outline: none;
+            &-item {
+                font-weight: 500;
+                background: #121212;
+
+                &:first-child {
+                    background: #ccc;
+                    user-select: none;
+                    pointer-events: none;
+                }
+            }
+        }
+
+        &-year {
+            inline-size: 50%;
+        }
+    }
+
+    .errorIcon {
+        color: var(--text-negative);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 4px;
+    }
+
+    .error-date {
+        color: var(--text-negative);
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.box-gender {
+    margin-top: 16px;
+    padding-bottom: 42px;
+
+    .list-gender {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .list-gender-item {
+        display: inline;
+    }
+
+    .gender-input {
+        display: none;
+    }
+
+    .gender-label {
+        display: flex;
+        align-items: center;
+    }
+
+    .gender-input:checked + .gender-label > .gender-check {
+        background-color: var(--essential-bright-accent, #169b45);
+        border: 1px solid var(--essential-bright-accent, #169b45);
+    }
+
+    .gender-check {
+        display: block;
+        position: relative;
+        width: 16px;
+        height: 16px;
+        background: var(--background-base, #ffffff);
+        // background-color: var(--essential-bright-accent, #169b45);
+        border: 1px solid var(--essential-subdued, #878787);
+        border-radius: 50%;
+
+        &::before {
+            background-color: var(--background-base, #ffffff);
+            border-radius: 50%;
+            content: '';
+            block-size: 0.5em;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            inline-size: 0.5em;
+        }
+    }
+
+    .gender-value {
+        padding: 0 24px 0 12px;
+    }
+}
+
+.box-infoUser {
+    animation: FadeIn 0.75s ease;
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

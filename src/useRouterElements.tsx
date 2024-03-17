@@ -49,16 +49,6 @@ const useRouterElements = () => {
                             <Register />
                         </AuthLayout>
                     ),
-                    children: [
-                        {
-                            path: path.register,
-                            element: <HomeRegister />,
-                        },
-                        {
-                            path: path.registerInfo,
-                            element: <RegisterStep />,
-                        },
-                    ],
                 },
             ],
         },

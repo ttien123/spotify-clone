@@ -8,6 +8,7 @@ export interface InputNumberProps extends InputHTMLAttributes<HTMLInputElement> 
     errorsMessage?: string;
     classNameInput?: string;
     classNameError?: string;
+    lengthNumber?: number;
 }
 
 const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(function InputNumberInner(
@@ -19,6 +20,7 @@ const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(function Inpu
         classNameError = 'classNameError',
         onChange,
         value = '',
+        lengthNumber = 2,
         ...rest
     },
     ref,
@@ -28,8 +30,7 @@ const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(function Inpu
         const { value } = event.target;
         // (/^\d+$/.test(value) || value === '') là để kiểm tra xem có phải là số hoặc "" không
         if (/^\d+$/.test(value) || value === '') {
-            if (value.length <= 2 && Number(value) <= 32 && Number(value) >= 0) {
-                console.log(value);
+            if (value.length <= lengthNumber) {
                 onChange && onChange(event);
                 setLocalValue(value);
             }
