@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes } from 'react';
+import { InputHTMLAttributes } from 'react';
 import type { UseFormRegister, RegisterOptions } from 'react-hook-form';
 import classNames from 'classnames/bind';
 import styles from './Input.module.scss';

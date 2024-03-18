@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import Logo from 'src/assets/Logo';
 const cx = classNames.bind(styles);
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Content } = Layout;
 
 import { Layout } from 'antd';
 const AuthLayout = ({ children }: { children: ReactNode }) => {

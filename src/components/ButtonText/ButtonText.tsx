@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes } from 'react';
 import styles from './ButtonText.module.scss';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';

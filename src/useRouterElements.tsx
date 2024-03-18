@@ -8,10 +8,10 @@ import Register from './pages/Register';
 import HomeRegister from './pages/Register/components/HomeRegister';
 import RegisterStep from './pages/Register/components/RegisterStep';
 
-function ProtectedRoute() {
-    const isAuthenticated = false;
-    return isAuthenticated ? <Outlet /> : <Navigate to={'/login'} />;
-}
+// function ProtectedRoute() {
+//     const isAuthenticated = false;
+//     return isAuthenticated ? <Outlet /> : <Navigate to={'/login'} />;
+// }
 function RejectedRoute() {
     const isAuthenticated = false;
 
